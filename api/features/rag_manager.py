@@ -4,7 +4,6 @@ PathRAG Manager - Centralized management of PathRAG instances
 
 import os
 import logging
-from typing import override
 from PathRAG import PathRAG
 from PathRAG.llmv1 import gpt_4o_mini_complete
 from dotenv import load_dotenv

@@ -116,6 +116,7 @@ def extract_text_from_file(file: UploadFile) -> str:
             for sheet in wb.worksheets:
                 for row in sheet.iter_rows(values_only=True):
                     row_text = " ".join([str(cell) for cell in row if cell is not None])
+                    print('row_text:::::::',row_text)
                     text += row_text + "\n"
             os.remove(tmp_path)
             return text

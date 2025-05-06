@@ -136,7 +136,7 @@ const DocumentUploader = ({ onUploadComplete }) => {
     ];
 
     // Also check by extension for cases where MIME type is not reliable
-    const allowedExtensions = ['.pdf', '.docx', '.md', '.txt', '.html', '.htm'];
+    const allowedExtensions = ['.pdf', '.docx', '.md', '.txt', '.html', '.htm', '.xlsx'];
     const fileExtension = file.name.substring(file.name.lastIndexOf('.')).toLowerCase();
 
     if (!allowedTypes.includes(file.type) && !allowedExtensions.includes(fileExtension)) {
@@ -209,6 +209,8 @@ const DocumentUploader = ({ onUploadComplete }) => {
       'text/markdown': ['.md'],
       'text/plain': ['.txt'],
       'text/html': ['.html', '.htm'],
+      'application/vnd.ms-excel': [],
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': [],
     },
     disabled: uploading,
     multiple: false,

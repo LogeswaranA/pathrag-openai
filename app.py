@@ -1,6 +1,5 @@
 import os
 import tempfile
-from typing import override
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import StreamingResponse
 from dotenv import load_dotenv
